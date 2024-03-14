@@ -15,8 +15,9 @@ namespace BetterDecorator
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(Decor("Good Morning!", '*', 3));
-            Console.WriteLine(Decor("Good Morning!", '.', 3));
+            char dec = char.Parse(args[1]);
+            int x = int.Parse(args[2]);
+            Console.WriteLine(Decor(args[0], dec, x));
 
         }
     }
