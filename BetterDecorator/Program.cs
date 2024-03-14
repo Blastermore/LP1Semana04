@@ -4,6 +4,15 @@ namespace BetterDecorator
 {
     class Program
     {
+        /// <summary>
+        /// Formats the string s by adding the dec char to each end of the 
+        /// string x times
+        /// </summary>
+        /// <param name="s">String to be decorated</param> 
+        /// <param name="dec">The decor char to be added to string ends</param>
+        /// <param name="x">Number of times dec gets added in each
+        /// string extremity</param>
+        /// <returns>The formatted string</returns>
         private static string Decor(string s, char dec, int x)
         {
             string final = $" {s} ";
@@ -13,6 +22,13 @@ namespace BetterDecorator
             }
             return final;
         }
+        /// <summary>
+        /// Converts each args element to the adequate type to be used by the
+        /// Decor method and prints the returning formatted string
+        /// </summary>
+        /// <param name="args">Array with 3 elements - the string to be
+        /// formatted, the dcor to be added to each ending and the
+        /// number of times the dec char gets added to each extremity</param>
         static void Main(string[] args)
         {
             char dec = char.Parse(args[1]);
