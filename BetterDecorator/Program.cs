@@ -2,6 +2,11 @@
 
 namespace BetterDecorator
 {
+    /// <summary>
+    /// Includes two methods - Decor and Main; the first formats the string
+    /// that we want to print while Main just converts agrs elements to 
+    /// adequate types to be used by the Decor method
+    /// </summary>
     class Program
     {
         /// <summary>
