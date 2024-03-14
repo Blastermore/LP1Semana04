@@ -27,6 +27,14 @@ namespace BetterDecorator
             }
             return final;
         }
+
+        private static string Decor()
+        {
+            string str = Decor("User did not specify args!", '=', 3);
+            return str;
+        }
+
+
         /// <summary>
         /// Converts each args element to the adequate type to be used by the
         /// Decor method and prints the returning formatted string
@@ -36,9 +44,16 @@ namespace BetterDecorator
         /// number of times the dec char gets added to each extremity</param>
         static void Main(string[] args)
         {
-            char dec = char.Parse(args[1]);
-            int x = int.Parse(args[2]);
-            Console.WriteLine(Decor(args[0], dec, x));
+            if (args.Length == 3)
+            {
+                char dec = char.Parse(args[1]);
+                int x = int.Parse(args[2]);
+                Console.WriteLine(Decor(args[0], dec, x));
+            }
+            else if (args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+            }
 
         }
     }
